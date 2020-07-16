@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Paint 🎨</title>
+  </head>
+  <body>
+    <div id="selectors">
+      <button id="black" onclick="changeColor('black')"></button>
+      <button id="white" onclick="changeColor('white')"></button>
+      <button id="red" onclick="changeColor('red')"></button>
+      <button id="orange" onclick="changeColor('orange')"></button>
+      <button id="yellow" onclick="changeColor('yellow')"></button>
+      <button id="green" onclick="changeColor('green')"></button>
+      <button id="blue" onclick="changeColor('blue')"></button>
+      <button id="purple" onclick="changeColor('purple')"></button>
+      <label for="color-picker">Color Picker</label>
+      <input
+        id="color-picker"
+        name="color-picker"
+        type="color"
+        value="#ffffff"
+        onchange="colorPick()"
+      />
+      <label for="change-stroke">Stroke Size</label>
+      <input
+        id="change-stroke"
+        name="change-stroke"
+        type="range"
+        min="1"
+        max="50"
+        value="5"
+        onchange="changeStroke()"
+      />
+    </div>
+   <!-- <div id="brush-types">
+        <button id="round" onclick="round()">Round</button>
+        <button id="spray" onclick="spraying()">Spray</button>
+        <button id="neon-glow">Neon-Glow</button>
+    </div> -->
+
+    <canvas id="canvas"></canvas>
+
+    <div id="clrbtn">
+      <button id="clear" onclick="clearCanvas()">Clear</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
